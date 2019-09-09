@@ -1,0 +1,16 @@
+Requirements:
+1.	Refactoring
+1.1	The system shall be updated from angular 1 to ReactJS (latest version if possible) F
+1.2	The system shall have improved speeds NF
+2 . Databases
+	2.1 We will fix synching issues with couch/pouch db
+	2.2  We shall preserve the database attributes 
+3. Documentation
+	3.1 We will add descriptive comments to code 
+	3.2 We will name variables and functions according to purpose
+	3.3 Extracting each step of logic into a function must be completed 
+	3.4  We shall remove redundancy in code
+4. Login 
+	4.1 Backend admin login will be created for the system
+	4.2 Encryption shall be added to secure passwords
+	4.3 Via email users shall be given a unique link with a login key 
