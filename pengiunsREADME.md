@@ -9,4 +9,5 @@ Ruth Whitehouse - UI/UX Designer, Data Modeler :wine_glass: :coffee:
 
 Joel Garcia - Project Manager, Secondary Programmer 🎸 🍗 👓
 
+Juan Juarez - Testing Lead, Client Liaison 🕊🍄🌯
 ## Installation instructions
