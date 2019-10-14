@@ -1,0 +1,63 @@
+<ion-view title="GGC STaRS: Home">
+  <ion-content class="padding has-header">
+    <div class="container">
+      <button type="button" class="button button-block btn-green icon-right ion-chevron-right"
+        ui-sref="tabs.posterList">Start Judging</button>
+        <div class="list-group card">
+          <div class="item item-divider text-center" ng-show="!notifyOfChanges">
+            No changes to be synced.
+          </div>
+          <div ng-show="notifyOfChanges">
+            <div class="item item-icon-right item-text-wrap list-group-item-danger item-divider">
+              <i class="icon ion-alert-circled"></i>
+              You have surveys not yet synced!
+            </div>
+            <a class="item item-icon-right"
+            ng-repeat="survey in changes" ui-sref="tabs.poster({id: survey.groupId})">
+              <h2>Completed Survey for {{survey.groupName}}</h2>
+              <i class="icon ion-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+
+      <div class="card">
+        <div class="card-header ggc-green white-text">
+          Your Completed Surveys
+        </div>
+        <div class="card-block">
+          <div class="list-group" ng-show="hasRecent" ng-repeat="survey in surveys track by $index">
+            <a class="list-group-item list-group-item-action item-icon-right home-list"
+              ui-sref="tabs.poster({id: survey.groupId})" style="text-decoration: none; margin-bottom: 20px;">
+              <h2 class="title-poster">{{survey.groupName}}</h2>
+              <div class="list list-accordion one-edge-shadow">
+                <div class="item-accordion">
+                  <div class="item item-icon-left-accordion item-custom-home ellipsis">
+                      <i class="fa fa-users"></i> <strong>Students: {{survey.students | clearText}}</strong>
+                  </div>
+                  <div class="item item-icon-left-accordion item-custom-home ellipsis">
+                      <i class="fa fa-graduation-cap"></i> <strong>Advisor: {{survey.advisor}}</strong>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div ng-show="!hasRecent" class="help-block text-center">
+            <strong>No recent surveys found.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+    <div class="card">
+      <div class="card-header ggc-green white-text">
+        Please take the time out to give us feedback on the app after you use it!
+      </div>
+      <div class="card-block">
+        <button type="button" class="button button-block btn-green icon-right ion-chevron-right" onclick="window.open('https://goo.gl/forms/F23qNHpDLftFDoQ33', '_blank')";>
+          App Feedback Survey Link
+        </button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+</ion-view>

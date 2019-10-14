@@ -1,0 +1,8 @@
+{
+  "nodemailer": {
+    "host": "smtp.ggc.edu",
+    "port": 25,
+    "secure": false
+  },
+  "adminemail": "Cengiz Gunay <cgunay@ggc.edu>"
+}
