@@ -1,7 +1,19 @@
 import React from 'react'
-// import {Route, Switch} from 'react-router-dom';
 
 export default function Judges(){
+
+    //This is the process used to set up asynchronous func that gets data from 
+    //api only when the component is first launched
+    
+    // useEffect(() => {
+    //     get things from api/database;
+    // }[]);
+
+    // const fetchData = async () => {
+    // const data = await ;
+    // };
+    // const dataItems = await data.json();
+
     return(
         <div>
         <h1>Judges</h1>
@@ -9,31 +21,3 @@ export default function Judges(){
         </div>
     );
 }
-
-// function Judges({ match }){
-//     return (
-//     <div>
-//         <h1>Judges</h1>  
-//         <ul>
-//             <li>
-//                 <Link to ={`${match.url}/remaining`}>What's left to judge?</Link>
-//             </li>
-//             <li>
-//                 <Link to={`${match.url}/completed`}>Completed</Link>    
-//             </li>
-            
-//         </ul>
-//         <Switch>
-//         <Route path={`${match.path}/:judgeId`} component={Judge} />
-//         <Route exact path={match.path} render={() => <h1>Select an option</h1>} />
-//         </Switch>
-//     </div>
-//     );
-// };
-
-// function Judge({match}){
-//     return(
-//         <h2> Requested judge ID: {match.params.judgeId}</h2>
-//     )
-// }
-// export default Judges;

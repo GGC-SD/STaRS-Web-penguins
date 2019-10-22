@@ -1,36 +1,34 @@
-import React, {Component} from 'react'
+import React, {Component, useState, useEffect} from 'react'
+import {Redirect} from 'react-router-dom';
+import * as Routes from '../../constants/routes'
 
-const style = {
-    margin: 20,
-    padding: 20,
-    color: 'black'
+
+
+//function to manage the button the links to the Judges page
+function Buttons(){
+    //each useState for the buttons respectively
+    const [jredir, setjRedir] = useState(false);  
+    const [predir, setpRedir] = useState(false);
+  
+    return(  
+        <div>
+            {jredir ? <Redirect to={Routes.JUDGES}/> : null}
+            {predir ? <Redirect to={Routes.POSTERS}/> : null}
+            <button onClick={() => setjRedir(true)}> Judges</button>
+            <button onClick={() => setpRedir(true)}> Poster</button>
+        </div>
+    )
 }
 
-export default function Home(){
-    return (<div style={style}>
+function Home(){
+
+    return (<div>
         <h1>Home</h1>
         <p>Hi welome to the STaRS app!</p>
-        <button>posters</button>
-        <button>judges</button>
+        <Buttons />        
     </div>)
 };
 
-//  export default class Home extends Component{
-//     state = {count: 0}
 
-//     componentDidMount() {
-//         setInterval =>(() => {
-//             this.setstate({count: this.state.count + 1})
-//         }, 1000)
-//     }
+export default Home;
 
-//     render() {
-//         const {count} = this.state
-//         const {color, size} = this.props
-
-//         return (
-//         <div style = {{color, fontSize: size}}>
-//             {count}
-//         </div>)
-//     }
-// }
