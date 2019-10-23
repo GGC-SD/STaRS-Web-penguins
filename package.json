@@ -3,14 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.3.1",
+    "pouchdb": "^7.1.1",
     "react": "^16.9.0",
+    "react-bootstrap": "1.0.0",
     "react-dom": "^16.9.0",
+    "react-pouchdb": "2.0.0",
     "react-router": "5.1.1",
     "react-router-dom": "5.1.1",
     "react-scripts": "3.1.1",
-    "request": "^2.88.0",
-    "bootstrap": "^4.3.1",
-    "reactstrap": "^8.0.1"
+    "reactstrap": "^8.0.1",
+    "request": "^2.88.0"
   },
   "repository": {
     "type": "git",
@@ -19,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -36,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
   }
 }

@@ -1,27 +1,34 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
+import Button from 'react-bootstrap/Button';
 
+const ulStyle = {
+    listStyleType: 'none',
+    margin: 0,
+    padding: 0,
+    overflow: 'hidden',
+    backgroundColor: '#28A745'
+}
+
+const linkStyle = {
+    color: 'white',
+    padding: '40px'
+}
 
 function Navigation(){
     
     return(
         <div className="nav-links">
         <ul>
-            <Link to={ROUTES.HOME}>
-                <li>home</li>
-            </Link>
-            <Link to={ROUTES.SIGN_IN}>
-                <li>Sign In</li>
-            </Link> 
-            <Link to={ROUTES.POSTERS}>
-                <li>posters</li>
-            </Link>
-            <Link to={ROUTES.JUDGES}>
-                <li>judges</li>
-            </Link>         
-            
-        </ul> 
+        <ul style = {ulStyle}>
+            <Link to="/home" style = {linkStyle}>Home Page</Link>
+            <Link to="/Judges" style = {linkStyle}>Judges Page</Link>
+            <Link to="/Posters" style = {linkStyle}>Posters Page</Link>          
+            <Link to="/SignIn" style = {linkStyle}>Sign In Page</Link>
+        </ul>         
+        </ul>  
+       
         </div>
     )
 } 

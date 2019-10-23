@@ -1,6 +1,19 @@
 import React from 'react'
 
-export default function Posters(){
+const style = {
+    margin: 20,
+    padding: 20,
+    color: 'black'
+}
+const styleH1 = {
+    fontSize: 36,
+    color: 'white',
+    width: 1060,
+    backgroundColor: "#2E8B57",
+    align: 'center'
+  }
+export default function Posters(props){
+    
 
     //This is the process used to set up asynchronous func that gets data from 
     //api only when the component is first launched
@@ -15,8 +28,8 @@ export default function Posters(){
     // const dataItems = await data.json();
 
 
-    return (<div>
-        <h1>Posters</h1>
+    return (<div style={style}>
+        <h1 style={styleH1}>Posters</h1>
         <p>A list of all the posters voted and unvoted</p>
     </div>
     )

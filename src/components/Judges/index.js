@@ -1,5 +1,18 @@
 import React from 'react'
 
+const style = {
+    margin: 20,
+    padding: 20,
+    color: 'black'
+}
+const styleH1 = {
+    fontSize: 36,
+    color: 'white',
+    width: 1060,
+    backgroundColor: "#2E8B57",
+    align: 'center'
+  }
+
 export default function Judges(){
 
     //This is the process used to set up asynchronous func that gets data from 
@@ -15,8 +28,8 @@ export default function Judges(){
     // const dataItems = await data.json();
 
     return(
-        <div>
-        <h1>Judges</h1>
+        <div style={style}>
+        <h1 style={styleH1}>Judges</h1>
         <p> This is for the judges</p>
         </div>
     );

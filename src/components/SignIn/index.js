@@ -1,8 +1,21 @@
 import React from 'react'
 
+const style = {
+    margin: 20,
+    padding: 20,
+    color: 'black'
+}
+const styleH1 = {
+    fontSize: 36,
+    color: 'white',
+    width: 1060,
+    backgroundColor: "#2E8B57",
+    align: 'center'
+  }
+
 export default function SignIn(){
-    return (<div>
-        <h1>Sign in</h1>
+    return (<div style={style}>
+        <h1 style={styleH1}>Sign in</h1>
         <p>this page is most likely to be combined with the landing page or home page.</p>
     </div>)
 };
