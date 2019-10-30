@@ -10,6 +10,8 @@ import Landing from '../../components/Landing';
 import Navigation from '../../components/Navigation';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+//hi guys making sure it works
+doritios = 'please work'
 const style = {
     margin: 20,
     flex: 1,
