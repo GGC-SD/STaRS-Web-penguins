@@ -11,15 +11,16 @@ Joel Garcia - Project Manager, Secondary Programmer 🎸 🍗 👓
 
 ## Installation instructions
 Requirements:
-ReactJs
-Npm or Yarn
-Express
-Node
+ - ReactJs
+ - Npm or Yarn
+ - Express
+ - Node
+ - IDE
 
 After getting requirements
-locate repo
-switch branch to penguins
-git clone repo
-run yarn or npm install
-run yarn start or npm start
+ - locate repo
+ - switch branch to penguins
+ - git clone repo
+ - run yarn or npm install
+ - run yarn start or npm start
 
