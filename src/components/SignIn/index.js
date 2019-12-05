@@ -1,22 +1,72 @@
-import React from 'react'
+import React, {useState} from 'react'
+import * as ReactBootstrap from 'react-bootstrap';
 
-const style = {
+const styleBody = {
     margin: 20,
     padding: 20,
-    color: 'black'
+    color: 'black',
+    boxShadow: '1px 1px 5px 5px #7d7c7c',
+    marginTop: '40px',
 }
 const styleH1 = {
     fontSize: 36,
     color: 'white',
-    width: 1060,
-    backgroundColor: "#2E8B57",
-    align: 'center'
+    width: 'auto',
+    backgroundColor: "#00704a",
+    align: 'center',
+    borderRadius: "5px"
   }
+ 
 
 export default function SignIn(){
-    return (<div style={style}>
+
+    const [login, setLogin] = useState({
+        judge: "",
+        password: "",
+    });
+    
+    const [judgeId, setJudgeId] = useState(0);
+    
+    const printLogin = e => {
+    
+    console.log(`judge: ${login.judge}, password: ${login.password}, id: ${judgeId}`);
+    };
+    
+    const updateField = e => {
+    setLogin({
+      ...login,
+      [e.target.name]: e.target.value
+    });
+    };
+
+    return (<div style={styleBody}>
         <h1 style={styleH1}>Sign in</h1>
-        <p>this page is most likely to be combined with the landing page or home page.</p>
+        <form onSubmit={printLogin}>
+            <label>
+                Judge
+                <input 
+                    value={login.judge}
+                    name="judge"
+                    onChange={updateField}
+                />
+            </label>
+
+            <label>
+                password
+                <input 
+                    type="password"
+                    value={login.password}
+                    name="password"
+                    onChange={updateField}
+                />
+            </label>
+
+            <br />
+            <ReactBootstrap.Button variant="secondary" onClick={() => {
+                setJudgeId(judgeId + 1);
+                printLogin();
+            }} >submit</ReactBootstrap.Button>
+        </form>
     </div>)
 };
 

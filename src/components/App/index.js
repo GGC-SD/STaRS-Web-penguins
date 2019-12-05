@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import {BrowserRouter as Router,Route, Switch} from 'react-router-dom';
 import AdminPage from "../../components/Admin";
@@ -10,14 +11,7 @@ import Landing from '../../components/Landing';
 import Navigation from '../../components/Navigation';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-//hi guys making sure it works
-doritios = 'please work'
-const style = {
-    margin: 20,
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'left',
-  }
+  
 /**We are exporting the main function of app component. It builds the routes to each component
  * so you can navigate to the correct page.
  */
@@ -25,11 +19,11 @@ export default function App (){
 
     return (
     <Router>
-        <div style={style}>
+        <div>
             <Navigation />
             <Switch>
-                <Route exact path={ROUTES.LANDING} component={Landing}/>
-                <Route path={ROUTES.HOME} component={HomePage}/>
+                {/* <Route path={ROUTES.LANDING} component={Landing}/> */}
+                <Route exact path={ROUTES.HOME} component={HomePage}/>
                 <Route path={ROUTES.JUDGES} component={JudgesPage} />
                 <Route path={ROUTES.POSTERS} component={PostersPage} />
                 <Route strict path={ROUTES.ADMIN} component={AdminPage} />

@@ -2,19 +2,33 @@ import React, {Component, useState, useEffect} from 'react'
 import {Redirect} from 'react-router-dom';
 import * as Routes from '../../constants/routes'
 import * as ReactBootstrap from 'react-bootstrap';
+import Logo from '../Landing/ggcseal.jpg'
 
-const style = {
+const styleBody = {
     margin: 20,
     padding: 20,
-    color: 'black'
+    color: 'black',
+    boxShadow: '1px 1px 5px 5px #7d7c7c',
+    marginTop: '40px',
 }
 const styleH1 = {
     fontSize: 36,
     color: 'white',
-    width: 1060,
-    backgroundColor: "#2E8B57",
-    align: 'center'
+    width: 'auto',
+    backgroundColor: '#00704a',
+    align: 'center',
+    borderRadius: "5px"
   }
+const customBtn = {
+    backgroundColor: '#00704a',
+    color: 'white',
+    border: '2px solid #00704a',
+  }
+  const imgStyle = {
+    marginLeft: 230,
+    maxWidth: '60%',
+    height: 'auto',
+}
 
 //function to manage the button the links to the Judges page
 function Buttons(){
@@ -26,8 +40,8 @@ function Buttons(){
         <div>
             {jredir ? <Redirect to={Routes.JUDGES}/> : null}
             {predir ? <Redirect to={Routes.POSTERS}/> : null}
-            <ReactBootstrap.Button variant="success" size="lg" onClick={() => setjRedir(true)} block> Judges</ReactBootstrap.Button>
-            <ReactBootstrap.Button variant="success" size="lg" onClick={() => setpRedir(true)} block> Poster</ReactBootstrap.Button>
+            <ReactBootstrap.Button style={customBtn} size="lg" onClick={() => setjRedir(true)} block> Judges</ReactBootstrap.Button>
+            <ReactBootstrap.Button style={customBtn} size="lg" onClick={() => setpRedir(true)} block> Poster</ReactBootstrap.Button>
         </div>
     )
 }
@@ -35,13 +49,13 @@ function Buttons(){
 
 function Home(){
 
-    return (<div style={style}>
+    return (<div style={styleBody}>
         <h1 style={styleH1}>Home</h1>
         <p>Hi welome to the STaRS app!</p>
         <Buttons />        
+        <img style={imgStyle} src={Logo}/>
     </div>)
 };
 
 
 export default Home;
-
