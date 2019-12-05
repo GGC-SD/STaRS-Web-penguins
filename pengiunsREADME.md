@@ -50,7 +50,7 @@ Admin is able to :
 ## Installation instructions
 
 1. `yarn` is required to install dependencies and run
-1. Clone repository
+1. Clone repository (penguins branch)
 1. Navigate to folder location in a terminal
 1. Run `yarn install` to install dependencies
 
@@ -58,4 +58,4 @@ Admin is able to :
 
 * Navigate to folder location in a terminal
 * Run `yarn start`
-* Open `localhost:2000` in a browser to view app locally
+* Open `localhost:3000` in a browser to view app locally
