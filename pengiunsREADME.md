@@ -8,10 +8,13 @@ As part of our Software Development II course with Dr. Anca Doloc-Mihu, we have 
 
 Anthony Morariu - Lead Programmer, Documentation Lead 💻🤡
 
+Information Technology major with a concentration in Software Development. I've been programming since highschool and have experience with multiple language with an interest in Machine Learning, Game Development, and automation of tasks. 
+
 Ruth Whitehouse - UI/UX Designer, Data Modeler :wine_glass: :coffee:
 
 Joel Garcia - Project Manager, Secondary Programmer 🎸 🍗 👓
- I am a Software developer with a focus in data science, robotics, and ReactJs. I am currently a senior who has been programming for 2 years. I hope to get a job in either web development or working with robotics and back-end development.
+
+I am a Software developer with a focus in data science, robotics, and ReactJs. I am currently a senior who has been programming for 2 years. I hope to get a job in either web development or working with robotics and back-end development.
 
 Juan Juarez - Client Liaison, Testing Lead, UI / UX Designer
 
